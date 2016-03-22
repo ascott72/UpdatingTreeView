@@ -1,0 +1,54 @@
+﻿@model UpdatingTreeView.Models.TreeViewModel
+
+@using (Ajax.BeginForm("AddNodes", "TreeViewModels", new AjaxOptions()
+{
+    HttpMethod = "Post",
+    OnSuccess = "alertSuccess"
+}, new { id = "addForm" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4>Name:</h4>
+        @Html.DisplayFor(model => model.NodeName)
+
+        @Html.HiddenFor(model => model.NodeID)
+        @Html.HiddenFor(model => model.NodeName)
+        <br />
+        <div class="form-group" id="randomNodes">
+
+            <div class="col-md-10">
+
+                <fieldset>
+                    <label for="rangeValue">Select Number of Nodes</label>
+                    <input type="range" id="rangeValue" name="rangeInput" value="3" min="1"
+                           max="15"/>
+                    <em id="rangeText">3</em>
+                </fieldset>
+                <br />
+                <p>Input desired range for random number generation</p>
+                <fieldset> 
+                    <p>Lower</p> <input type="number" name="lowBound" id="LowerRandom" value="1" />
+                    <br />
+                    <p>Upper</p> <input type="number" name="upperBound" id="UpperRandom" value="100" />
+                </fieldset>
+                 
+            </div>
+         </div>
+        <br />
+        <div class="form-group">
+            
+            <div class="col-md-offset-2 col-md-10">
+                <button type="button" id="defaultRange" class="btn btn-default">Default</button>
+                <input type="submit" value="Add" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+  
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@
+
+
+
+

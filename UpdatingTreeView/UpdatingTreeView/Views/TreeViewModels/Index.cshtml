@@ -1,0 +1,42 @@
+﻿@model IEnumerable<UpdatingTreeView.Models.TreeViewModel>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+<link type="text/css" href="~/Content/themes/base/jquery-treeview.css" rel="stylesheet" />
+<link type="text/css" href="~/Content/themes/base/jquery.contextMenu.css" rel="stylesheet" />
+<style type="text/css">
+    .treeview .span-selectable {
+        cursor: pointer;
+        margin-left: 5px;
+        color: blue;
+    }
+
+    .treeview .span-deletable {
+        cursor: pointer;
+        margin-left: 5px;
+        color: green;
+    }
+</style>
+
+
+
+<h1>Tree View Web Application</h1>
+<hr />
+<div><button type="button" class="btn btn-primary btn-sm" id="cnp">Create New Parent</button></div>
+
+<br />
+
+<div id="tree-display"></div>
+
+<div id="pop-box"></div>
+
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+            <script type="text/javascript" src="~/Scripts/jquery-treeview-1.0.1.js"></script>
+            <script type="text/javascript" src="~/Scripts/jquery.contextMenu.js"></script>
+            <script type="text/javascript" src="~/Scripts/PopupOptions.js"></script>
+            <div id="addDynamic" data-default-values="@Url.Content("~/Scripts/AddNodesDefault.js")">
+            </div>
+        }

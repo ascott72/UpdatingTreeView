@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Tree View Model Application ReadMe</title>
+    <style>
+        body {
+            background: #fff;
+            color: #505050;
+            font: 14px 'Segoe UI', tahoma, arial, helvetica, sans-serif;
+            margin: 20px;
+            padding: 0;
+        }
+
+        #header {
+            background: #efefef;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: normal;
+            margin: 0;
+            padding: 0 30px;
+            line-height: 150px;
+        }
+
+        p {
+            font-size: 20px;
+            color: #fff;
+            background: #969696;
+            padding: 0 30px;
+            line-height: 50px;
+        }
+
+        #main {
+            padding: 5px 30px;
+        }
+
+        .section {
+            width: 21.7%;
+            float: left;
+            margin: 0 0 0 4%;
+        }
+
+            .section h2 {
+                font-size: 13px;
+                text-transform: uppercase;
+                margin: 0;
+                border-bottom: 1px solid silver;
+                padding-bottom: 12px;
+                margin-bottom: 8px;
+            }
+
+            .section.first {
+                margin-left: 0;
+            }
+
+                .section.first h2 {
+                    font-size: 24px;
+                    text-transform: none;
+                    margin-bottom: 25px;
+                    border: none;
+                }
+
+                .section.first li {
+                    border-top: 1px solid silver;
+                    padding: 8px 0;
+                }
+
+            .section.last {
+                margin-right: 0;
+            }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            line-height: 20px;
+        }
+
+        li {
+            padding: 4px 0;
+        }
+
+        a {
+            color: #267cb2;
+            text-decoration: none;
+        }
+
+            a:hover {
+                text-decoration: underline;
+            }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Project ReadMe</h1>
+    </div>
+
+    <div id="main">
+        <div class="section first">
+            <h2>This File consists of:</h2>
+            <ul>
+                <li>Introduction</li>
+                <li>Functionality</li>
+                <li>Troubleshooting</li>
+                <li>ASP.NET features managed using <a href="http://go.microsoft.com/fwlink/?LinkID=615521">NuGet</a></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Introduction</h2>
+            <ul>
+                <li>This project was created simply for <a href="https://gopassport.com/">Passport</a> as part of a job application.</li>
+                <li>Project was created in using ASP.Net 4.5.2 MVC in VS 2015.</li>
+                <li>Tree View Model enables CRUD operations(SQL Server) along with the operation for random generation of child nodes.</li> 
+                <li> Operations were created using ajax allowing for immediate post back without reloading or redirecting to another page. Enjoy;).</li
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Functionality</h2>
+            <ul>
+                <li>Children can be viewed by expanding/collapsing leftmost box upon click.</li>
+                <li>Left Click on each node to access options in a popup content box</li>
+                <li>Once in content box select option to bring up dialog box</li>
+                <li>Parent Nodes can be created only be clicking create new parent button</li>
+                <li>Parent Nodes can be created, renamed, add children or deleted</li>
+                <li>Child Nodes can be renamed or deleted</li>
+                <li>Edit Renames the element</li>
+                <li>Add Nodes gives the user option of selecting the number of children to create (up to 15) and the range of random number generation</li>
+                <li>Add Nodes also allows user to select the default number of children and range</li>
+                <li>The Tree View Model is automatically updated upon each change</li>
+            </ul>
+        </div>
+
+        <div class="section last">
+            <h2>TroubleShooting</h2>
+            <ul>
+                <li>I have Tested this project and everything works correctly.</li>
+                <li>However problems may occur related to speed and other things.
+                Should that happen, simply refresh the page, or wait for everything to load. </li>
+                 
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
